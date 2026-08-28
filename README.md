@@ -4,6 +4,9 @@
 
 Model weights are hosted separately on **Hugging Face** (too large for GitHub).
 
+> **Important:** Run all `git` commands inside **`E:\BME\github-upload`**, not the parent `E:\BME` folder.
+> This folder is already initialized as a Git repository.
+
 ## Quick Start
 
 ```bash
@@ -59,14 +62,37 @@ huggingface-cli upload YOUR_USERNAME/liver-hcc-models . .
 
 ## GitHub Upload
 
+**Use this folder:** `E:\BME\github-upload` (Git repo is already initialized here)
+
+### Option A — Command line
+
+```bash
+cd E:\BME\github-upload
+git remote add origin https://github.com/YOUR_USERNAME/liver-hcc-qt-demo.git
+git branch -M main
+git push -u origin main
+```
+
+### Option B — GitHub Desktop
+
+1. Open GitHub Desktop → **File → Add local repository**
+2. Choose folder: `E:\BME\github-upload` (not `E:\BME`)
+3. Click **Publish repository**
+
+### Option C — VS Code / Cursor
+
+1. **File → Open Folder** → select `E:\BME\github-upload`
+2. Source Control panel → **Publish to GitHub**
+
+If you see *"not a git repository"*, you opened the wrong folder. Go up one level and pick `github-upload`.
+
+### First-time setup (already done)
+
 ```bash
 cd E:\BME\github-upload
 git init
 git add .
-git commit -m "Initial commit: liver HCC segmentation GUI"
-git remote add origin https://github.com/YOUR_USERNAME/liver-hcc-segmentation.git
-git branch -M main
-git push -u origin main
+git commit -m "Initial commit: Liver HCC Segmentation PyQt5 interactive demo"
 ```
 
 ## Results
