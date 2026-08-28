@@ -6,6 +6,12 @@ All-in-one runnable demo: nnU-Net v2 + YOLOv8 fusion with **PyQt5 GUI** for slic
 
 **Repo:** https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo
 
+## Demo Video
+
+https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo/raw/main/docs/demo.mp4
+
+<video src="docs/demo.mp4" controls width="100%"></video>
+
 ## Quick Start
 
 ```bash
@@ -21,6 +27,8 @@ Windows: double-click `run.bat`
 ## Project Layout
 
 ```
+├── docs/
+│   └── demo.mp4               # GUI demo screencast
 ├── run.py / run.bat           # launch demo
 ├── setup_assets.py            # auto-copy models from local BME backup (optional)
 ├── config.py                  # paths (everything under models/)
