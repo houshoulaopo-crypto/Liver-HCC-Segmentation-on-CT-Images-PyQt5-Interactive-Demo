@@ -8,9 +8,8 @@ All-in-one runnable demo: nnU-Net v2 + YOLOv8 fusion with **PyQt5 GUI** for slic
 
 ## Demo Video
 
-https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo/raw/main/docs/demo.mp4
-
-<video src="docs/demo.mp4" controls width="100%"></video>
+<video src="https://raw.githubusercontent.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo/main/docs/demo.mp4" controls width="100%">
+</video>
 
 ## Quick Start
 
