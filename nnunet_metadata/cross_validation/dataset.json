@@ -1,0 +1,11 @@
+{
+    "channel_names": {
+        "0": "CBCT"
+    },
+    "labels": {
+        "background": 0,
+        "Tumor": 1
+    },
+    "numTraining": 289,
+    "file_ending": ".nii.gz"
+}

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Downloaded models (fetched from Hugging Face)
+models/
+
+# OS
+Thumbs.db
+Desktop.ini
