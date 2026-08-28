@@ -1,11 +1,9 @@
 # Liver HCC Segmentation on CT Images — PyQt5 Interactive Demo
 
-**Competition entry (ID: 7200)** — nnU-Net v2 + YOLOv8 fusion pipeline with a **PyQt5 desktop demo** for slice viewing, mask overlay, and VTK 3D reconstruction.
+nnU-Net v2 + YOLOv8 fusion pipeline with a **PyQt5 desktop demo** for slice viewing, mask overlay, and VTK 3D reconstruction.
 
 Model weights are hosted separately on **Hugging Face** (too large for GitHub).
 
-> **Important:** Run all `git` commands inside **`E:\BME\github-upload`**, not the parent `E:\BME` folder.
-> This folder is already initialized as a Git repository.
 
 ## Quick Start
 
