@@ -1,65 +1,54 @@
 # Liver HCC Segmentation on CT Images — PyQt5 Interactive Demo
 
-9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
+**Competition entry (ID: 7200)** — 9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
 
-nnU-Net v2 + YOLOv8 fusion pipeline with a **PyQt5 desktop demo** for slice viewing, mask overlay, and VTK 3D reconstruction.
+All-in-one runnable demo: nnU-Net v2 + YOLOv8 fusion with **PyQt5 GUI** for slice viewing, mask overlay, and VTK 3D reconstruction.
 
-Model weights are hosted separately on **Hugging Face** (too large for GitHub).
-
+**Repo:** https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo
 
 ## Quick Start
 
 ```bash
-# 1. Install dependencies
+git clone https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo.git
+cd Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo
+
 pip install -r requirements.txt
-
-# 2. Download models from Hugging Face (after you upload them)
-python download_models.py --repo YOUR_USERNAME/liver-hcc-models
-
-# 3. Launch GUI
-python app/main.py
+python run.py             # launch GUI
 ```
+
+Windows: double-click `run.bat`
 
 ## Project Layout
 
 ```
-github-upload/                 ← upload THIS folder to GitHub
+├── run.py / run.bat           # launch demo
+├── setup_assets.py            # auto-copy models from local BME backup (optional)
+├── config.py                  # paths (everything under models/)
 ├── app/
-│   ├── main.py                ← GUI entry point
+│   ├── main.py                # PyQt5 GUI entry
 │   ├── liver_tumor_segment_app.py
 │   └── liver_tumor_segment_app.ui
-├── scripts/
-│   ├── check_nii.py           ← nnU-Net + YOLO fusion
-│   ├── cal_dice.py            ← evaluation
-│   └── yolo/                  ← YOLO training & inference scripts
-├── preprocessing/             ← data preprocessing utilities
-├── nnunet_metadata/           ← training logs & cross-val metrics
-├── config.py                  ← paths configuration
-├── download_models.py         ← download from Hugging Face
-├── requirements.txt
-└── README.md
-
-huggingface-models/            ← upload THIS folder to Hugging Face
-├── yolo/best.pt
-├── predictions/inferTs/
-└── nnunet/crossval_results_folds_0_1_2_3_4/
+├── models/                    # weights, predictions & demo CT (in repo)
+│   ├── yolo/best.pt
+│   ├── predictions/inferTs/
+│   ├── nnunet/.../crossval_results_folds_0_1_2_3_4/
+│   └── demo/sample_ct/
+├── scripts/                   # training, fusion, evaluation
+├── preprocessing/
+└── nnunet_metadata/           # cross-val metrics & logs
 ```
 
-## Hugging Face Setup
+> **Note:** nnU-Net `checkpoint_*.pth` files are ~235 MB each (GitHub limit: 100 MB/file) and are **not** included. The demo runs using pre-computed masks in `models/predictions/inferTs/`.
 
-1. Go to [huggingface.co/new](https://huggingface.co/new) and create a **Model** repo (e.g. `liver-hcc-models`)
-2. Copy your model files into `E:\BME\huggingface-models\` following the folder layout
-3. Upload to Hugging Face:
+## GUI Usage
 
-```bash
-pip install huggingface_hub
-huggingface-cli login
-cd E:\BME\huggingface-models
-huggingface-cli upload YOUR_USERNAME/liver-hcc-models . .
-```
-
-4. Edit `config.py` and set `HF_REPO_ID = "YOUR_USERNAME/liver-hcc-models"`
-
+| Button | Function |
+|--------|----------|
+| Open File | Load `.nii` / `.nii.gz` CT scan (try `models/demo/sample_ct/`) |
+| Start Segmentation | Load pre-computed mask from `models/predictions/inferTs/` |
+| YOLO Prediction | Run slice-wise detection with `models/yolo/best.pt` |
+| Show Mask / Segmentation | Toggle overlay views |
+| 3D Segmentation | VTK surface rendering |
 
 ## Results
 

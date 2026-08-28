@@ -9,9 +9,10 @@ env/
 .idea/
 .vscode/
 
-# Downloaded models (fetched from Hugging Face)
-models/
-
 # OS
 Thumbs.db
 Desktop.ini
+
+# nnU-Net fold checkpoints exceed GitHub 100 MB/file limit (~235 MB each).
+# The demo runs without them (uses pre-computed masks in predictions/inferTs/).
+models/nnunet/**/checkpoint*.pth

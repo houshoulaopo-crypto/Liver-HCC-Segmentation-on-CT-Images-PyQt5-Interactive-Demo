@@ -95,7 +95,8 @@ class Window(Ui_MainWindow, QMainWindow):
                 self,
                 "Model not found",
                 f"YOLO weights not found at:\n{YOLO_WEIGHTS}\n\n"
-                "Run: python download_models.py",
+                "Run: python setup_assets.py\n"
+                "Or copy best.pt into models/yolo/",
             )
             self.model = None
         else:
@@ -321,7 +322,8 @@ class Window(Ui_MainWindow, QMainWindow):
                         self,
                         "Predictions not found",
                         f"Pre-computed masks not found at:\n{self.source_dir}\n\n"
-                        "Run: python download_models.py",
+                        "Run: python setup_assets.py\n"
+                        "Or copy .nii.gz masks into models/predictions/inferTs/",
                     )
                     return
 

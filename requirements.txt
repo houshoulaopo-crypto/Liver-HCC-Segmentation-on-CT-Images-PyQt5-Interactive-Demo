@@ -20,6 +20,3 @@ scikit-image>=0.20.0
 scikit-learn>=1.2.0
 opencv-python>=4.7.0
 matplotlib>=3.7.0
-
-# Model download
-huggingface_hub>=0.20.0
