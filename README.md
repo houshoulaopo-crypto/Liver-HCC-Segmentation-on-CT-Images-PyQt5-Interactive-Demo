@@ -1,6 +1,7 @@
 # Liver HCC Segmentation on CT Images — PyQt5 Interactive Demo
 
 9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
+https://ifmbe.org/9th-national-college-student-biomedical-engineering-innovative-design-competition/
 
 All-in-one runnable demo: nnU-Net v2 + YOLOv8 fusion with **PyQt5 GUI** for slice viewing, mask overlay, and VTK 3D reconstruction.
 
