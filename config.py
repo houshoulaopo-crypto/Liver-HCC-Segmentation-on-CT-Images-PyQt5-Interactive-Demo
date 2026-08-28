@@ -8,7 +8,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 MODEL_ROOT = Path(os.environ.get("MODEL_ROOT", PROJECT_ROOT / "models"))
 
 # Hugging Face repo — replace YOUR_USERNAME after you create the HF repo
-HF_REPO_ID = os.environ.get("HF_REPO_ID", "YOUR_USERNAME/liver-hcc-models")
+HF_REPO_ID = os.environ.get("HF_REPO_ID", "houshoulaopo-crypto/liver-hcc-models")
 
 # Model file locations (must match huggingface-models/ layout)
 YOLO_WEIGHTS = MODEL_ROOT / "yolo" / "best.pt"

@@ -68,7 +68,7 @@ huggingface-cli upload YOUR_USERNAME/liver-hcc-models . .
 
 ```bash
 cd E:\BME\github-upload
-git remote add origin https://github.com/YOUR_USERNAME/liver-hcc-qt-demo.git
+git remote add origin https://github.com/houshoulaopo-crypto/liver-hcc-qt-demo.git
 git branch -M main
 git push -u origin main
 ```
