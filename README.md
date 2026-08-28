@@ -1,5 +1,7 @@
 # Liver HCC Segmentation on CT Images — PyQt5 Interactive Demo
 
+9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
+
 nnU-Net v2 + YOLOv8 fusion pipeline with a **PyQt5 desktop demo** for slice viewing, mask overlay, and VTK 3D reconstruction.
 
 Model weights are hosted separately on **Hugging Face** (too large for GitHub).
