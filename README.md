@@ -1,6 +1,6 @@
 # Liver HCC Segmentation on CT Images — PyQt5 Interactive Demo
 
-**Competition entry (ID: 7200)** — 9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
+9th National Undergraduate Biomedical Engineering Innovation Design Competition, 2024.
 
 All-in-one runnable demo: nnU-Net v2 + YOLOv8 fusion with **PyQt5 GUI** for slice viewing, mask overlay, and VTK 3D reconstruction.
 
@@ -38,7 +38,7 @@ Windows: double-click `run.bat`
 └── nnunet_metadata/           # cross-val metrics & logs
 ```
 
-> **Note:** nnU-Net `checkpoint_*.pth` files are ~235 MB each (GitHub limit: 100 MB/file) and are **not** included. The demo runs using pre-computed masks in `models/predictions/inferTs/`.
+> **Note:** nnU-Net are **not** included. The demo runs using pre-computed masks in `models/predictions/inferTs/`.
 
 ## GUI Usage
 
