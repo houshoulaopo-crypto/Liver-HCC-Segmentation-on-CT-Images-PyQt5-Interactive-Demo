@@ -60,40 +60,6 @@ huggingface-cli upload YOUR_USERNAME/liver-hcc-models . .
 
 4. Edit `config.py` and set `HF_REPO_ID = "YOUR_USERNAME/liver-hcc-models"`
 
-## GitHub Upload
-
-**Use this folder:** `E:\BME\github-upload` (Git repo is already initialized here)
-
-### Option A — Command line
-
-```bash
-cd E:\BME\github-upload
-git remote add origin https://github.com/houshoulaopo-crypto/Liver-HCC-Segmentation-on-CT-Images-PyQt5-Interactive-Demo.git
-git branch -M main
-git push -u origin main
-```
-
-### Option B — GitHub Desktop
-
-1. Open GitHub Desktop → **File → Add local repository**
-2. Choose folder: `E:\BME\github-upload` (not `E:\BME`)
-3. Click **Publish repository**
-
-### Option C — VS Code / Cursor
-
-1. **File → Open Folder** → select `E:\BME\github-upload`
-2. Source Control panel → **Publish to GitHub**
-
-If you see *"not a git repository"*, you opened the wrong folder. Go up one level and pick `github-upload`.
-
-### First-time setup (already done)
-
-```bash
-cd E:\BME\github-upload
-git init
-git add .
-git commit -m "Initial commit: Liver HCC Segmentation PyQt5 interactive demo"
-```
 
 ## Results
 
